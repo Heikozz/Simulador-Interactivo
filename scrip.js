@@ -20,7 +20,7 @@ const envio = 800; //valor aproximado del costo de envio promedio dentro de CABA
 //le pedimos al usuario el precio de la prenda, la cantidad y el porcentaje del descuento
 let ingresar = prompt("Desea calcular el precio de una prenda?");
 
-while (ingresar.toLocaleLowerCase() == si) {
+while (ingresar.toLocaleLowerCase() == "si") {
   let prenda = parseFloat(
     prompt("Ingrese el precio de la prenda que desea comprar")
   );
@@ -32,4 +32,6 @@ while (ingresar.toLocaleLowerCase() == si) {
   let precioFinal = calcularPrecio(prenda, cantidad, descuento, envio);
   alert("El precio total de tu compra es $" + precioFinal);
   alert("¡Que lo disfrutes!");
+
+  ingresar = prompt("desea calcular el precio de otra prenda?")
 }
